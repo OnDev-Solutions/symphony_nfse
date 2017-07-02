@@ -10,21 +10,21 @@ class Recepcao extends \SoapClient
      * @var array $classmap The defined classes
      */
     private static $classmap = array(
-        'InvoiCy' => '\\InvoiCy',
-        'Dados' => '\\Dados',
-        'InvoiCyRecepcao.Cabecalho' => '\\InvoiCyRecepcaoCabecalho',
-        'InvoiCyRecepcao.Informacoes' => '\\InvoiCyRecepcaoInformacoes',
-        'ArrayOfInvoiCyRecepcao.DadosItem' => '\\ArrayOfInvoiCyRecepcaoDadosItem',
-        'InvoiCyRecepcao.DadosItem' => '\\InvoiCyRecepcaoDadosItem',
-        'Invoicyretorno' => '\\InvoicyRetorno',
-        'Mensagem' => '\\Mensagem',
-        'ArrayOfInvoiCyRetorno.MensagemItem' => '\\ArrayOfInvoiCyRetornoMensagemItem',
-        'InvoiCyRetorno.MensagemItem' => '\\InvoiCyRetornoMensagemItem',
-        'Documentos' => '\\Documentos',
-        'ArrayOfInvoiCyRetorno.MensagemItem.DocumentosItem' => '\\ArrayOfInvoiCyRetornoMensagemItemDocumentosItem',
-        'InvoiCyRetorno.MensagemItem.DocumentosItem' => '\\InvoiCyRetornoMensagemItemDocumentosItem',
-        'recepcao.Execute' => '\\recepcaoExecute',
-        'recepcao.ExecuteResponse' => '\\recepcaoExecuteResponse',
+        'InvoiCy' => '\\Invoicy\\InvoiCy',
+        'Dados' => '\\Invoicy\\Dados',
+        'InvoiCyRecepcaoCabecalho' => '\\Invoicy\\Recepcao\\InvoiCyRecepcaoCabecalho',
+        'InvoiCyRecepcaoInformacoes' => '\\Invoicy\\Recepcao\\InvoiCyRecepcaoInformacoes',
+        'ArrayOfInvoiCyRecepcaoDadosItem' => '\\Invoicy\\Recepcao\\ArrayOfInvoiCyRecepcaoDadosItem',
+        'InvoiCyRecepcaoDadosItem' => '\\Invoicy\\Recepcao\\InvoiCyRecepcaoDadosItem',
+        'InvoicyRetorno' => '\\Invoicy\\Retorno\\InvoicyRetorno',
+        'Mensagem' => '\\Invoicy\\Mensagem',
+        'ArrayOfInvoiCyRetornoMensagemItem' => '\\Invoicy\\Retorno\\ArrayOfInvoiCyRetornoMensagemItem',
+        'InvoiCyRetornoMensagemItem' => '\\Invoicy\\Retorno\\InvoiCyRetornoMensagemItem',
+        'Documentos' => '\\Invoicy\\Documentos',
+        'ArrayOfInvoiCyRetornoMensagemItemDocumentosItem' => '\\Invoicy\\Retorno\\ArrayOfInvoiCyRetornoMensagemItemDocumentosItem',
+        'InvoiCyRetornoMensagemItemDocumentosItem' => '\\Invoicy\\Retorno\\InvoiCyRetornoMensagemItemDocumentosItem',
+        'RecepcaoExecute' => '\\Invoicy\\RecepcaoExecute',
+        'RecepcaoExecuteResponse' => '\\Invoicy\\RecepcaoExecuteResponse',
     );
 
     /**
@@ -48,10 +48,10 @@ class Recepcao extends \SoapClient
     }
 
     /**
-     * @param recepcaoExecute $parameters
-     * @return recepcaoExecuteResponse
+     * @param RecepcaoExecute $parameters
+     * @return RecepcaoExecuteResponse
      */
-    public function Execute($parameters)
+    public function Execute(RecepcaoExecute $parameters)
     {
         return $this->__soapCall('Execute', array($parameters));
     }

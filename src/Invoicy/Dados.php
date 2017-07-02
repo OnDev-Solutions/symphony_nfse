@@ -3,6 +3,8 @@
 namespace Invoicy;
 
 
+use Invoicy\Recepcao\InvoiCyRecepcaoDadosItem;
+
 class Dados
 {
 
@@ -14,7 +16,7 @@ class Dados
     /**
      * @param Recepcao\InvoiCyRecepcaoDadosItem $DadosItem
      */
-    public function __construct($DadosItem)
+    public function __construct(InvoiCyRecepcaoDadosItem $DadosItem)
     {
       $this->DadosItem = $DadosItem;
     }

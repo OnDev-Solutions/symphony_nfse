@@ -1,6 +1,6 @@
 <?php
 
-namespace InvoiCy;
+namespace Invoicy;
 
 
 class RecepcaoExecute
@@ -14,7 +14,7 @@ class RecepcaoExecute
     /**
      * @param InvoiCy $Invoicyrecepcao
      */
-    public function __construct($Invoicyrecepcao)
+    public function __construct(InvoiCy $Invoicyrecepcao)
     {
       $this->Invoicyrecepcao = $Invoicyrecepcao;
     }
@@ -29,7 +29,7 @@ class RecepcaoExecute
 
     /**
      * @param InvoiCy $Invoicyrecepcao
-     * @return recepcaoExecute
+     * @return RecepcaoExecute
      */
     public function setInvoicyrecepcao($Invoicyrecepcao)
     {

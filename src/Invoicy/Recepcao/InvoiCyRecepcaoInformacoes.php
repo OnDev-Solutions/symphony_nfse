@@ -14,7 +14,7 @@ class InvoiCyRecepcaoInformacoes
     /**
      * @param string $Texto
      */
-    public function __construct($Texto)
+    public function __construct($Texto = "")
     {
       $this->Texto = $Texto;
     }

@@ -3,6 +3,9 @@
 namespace Invoicy;
 
 
+use Invoicy\Recepcao\InvoiCyRecepcaoCabecalho;
+use Invoicy\Recepcao\InvoiCyRecepcaoInformacoes;
+
 class InvoiCy
 {
 
@@ -26,7 +29,7 @@ class InvoiCy
      * @param Recepcao\InvoiCyRecepcaoInformacoes $Informacoes
      * @param Dados $Dados
      */
-    public function __construct($Cabecalho, $Informacoes, $Dados)
+    public function __construct(InvoiCyRecepcaoCabecalho $Cabecalho, InvoiCyRecepcaoInformacoes $Informacoes, Dados $Dados)
     {
       $this->Cabecalho = $Cabecalho;
       $this->Informacoes = $Informacoes;

@@ -29,7 +29,7 @@ class RecepcaoExecuteResponse
 
     /**
      * @param Retorno\Invoicyretorno $Invoicyretorno
-     * @return recepcaoExecuteResponse
+     * @return RecepcaoExecuteResponse
      */
     public function setInvoicyretorno($Invoicyretorno)
     {
